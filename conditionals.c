@@ -4,13 +4,13 @@ int main(){
     int num;
   printf("Enter a Number");
   scanf("%d",&num);
-//    if (num%2==0)
-//    {
-//      printf("Divisible by 2");
-//    }else
-//    {
-//     printf("Not Divisible by 2");
-//    }
+   if (num%2==0)
+   {
+     printf("Divisible by 2");
+   }else
+   {
+    printf("Not Divisible by 2");
+   }
 printf("%d",num%2==0);
    
    
