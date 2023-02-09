@@ -1,27 +1,38 @@
 #include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
 
-int main()
+int main() 
 {
 
-    int i = 0;
-    int *j = &i;
-
-    if (i == 0)
-    {
-        printf("%d %u\n", i, j);
-        int i = 1;
-        j = &i;
-        if (i == 1)
-        {
-            printf("%d %u\n", i, j);
-            int i = 2;
-            j = &i;
-            if (i == 2)
-            {
-                printf("%d %u\n", i, j);
-            }
+    int n;
+    scanf("%d",&n);
+    int size=2*n-1;
+    int start=0;
+    int end= size-1;
+    int a[size][size];
+    scanf("%d", &n);
+    
+    while (n!=0) {
+        for(int i=start;i<=end;i++){
+for (int j=start; j<=end; j++ ) {
+   if (i==start|| j==start||i==end||j==end) {
+      a[i][j]=n;
+   }
+}
         }
+        start++;
+        end--;
+        n--;
     }
-    printf("%d %u",*j,j);
- return 0;
+  	
+   for (int i=0; i<size;i++ ) {
+    for(int j=0; j<size; j++){
+        printf("%d",a[i][j]);
+        printf("\n");
+    }
+   }   
+      
+    return 0;
 }
