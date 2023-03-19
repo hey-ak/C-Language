@@ -44,7 +44,7 @@ int isPalindrome(char str[], int start, int end) {
 }
 
 int main() {
-    char str[] = "racecar";
+    char str[] = "Akshay";
     int n = strlen(str);
     int result = isPalindrome(str, 0, n-1);
     if (result == 1) {
