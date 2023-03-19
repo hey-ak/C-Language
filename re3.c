@@ -19,21 +19,41 @@
 
 // }
 // problem -2
-#include <stdio.h>
+// #include <stdio.h>
 
-int sumprint(int n) {
-    if (n == 0) {
-        return 0;
+// int sumprint(int n) {
+//     if (n == 0) {
+//         return 0;
+//     }
+//     int sum = n + sumprint(n-1);
+//     return sum;
+// }
+
+// int main() {
+//     int n;
+//     printf("Enter n: ");
+//     scanf("%d", &n);
+//     int result = sumprint(n);
+//     printf("Sum of numbers from 1 to %d is %d\n", n, result);
+//     return 0;
+// }
+// program -3 factorial of a program
+#include <stdio.h>
+int factorial(int n){
+    if (n==0 || n==1)
+    {
+        return 1;
     }
-    int sum = n + sumprint(n-1);
-    return sum;
+    int fact= n*factorial(n-1);
+    return fact;
+
 }
 
-int main() {
+int main(){
     int n;
-    printf("Enter n: ");
-    scanf("%d", &n);
-    int result = sumprint(n);
-    printf("Sum of numbers from 1 to %d is %d\n", n, result);
-    return 0;
+    printf("Enter n ");
+    scanf("%d",&n);
+    int result = factorial(n);
+    printf("%d",result);
+ return 0;
 }
